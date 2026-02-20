@@ -3,37 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alien Mingle - Find your Extraterrestrial Soul Mate</title>
+    <title>Alien Mingle | Find your Extraterrestrial Soul Mate</title>
     <style>
         :root { --alien-green: #00ffcc; --space-black: #05070a; }
-        body, html { margin: 0; padding: 0; height: 100%; background: var(--space-black); color: var(--alien-green); font-family: 'Segoe UI', Roboto, sans-serif; display: flex; align-items: center; justify-content: center; overflow-x: hidden; }
         
-        /* Moving Stars Background */
-        .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent url('https://www.transparenttextures.com') repeat; animation: moveStars 100s linear infinite; z-index: -1; }
-        @keyframes moveStars { from { background-position: 0 0; } to { background-position: 10000px 5000px; } }
+        body, html { 
+            margin: 0; padding: 0; min-height: 100%; 
+            background: var(--space-black); 
+            color: var(--alien-green); 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            display: flex; align-items: center; justify-content: center;
+        }
+        
+        /* Animated Starfield Background */
+        .stars { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: transparent url('https://www.transparenttextures.com') repeat; 
+            animation: moveStars 120s linear infinite; z-index: -1; 
+        }
+        @keyframes moveStars { 
+            from { background-position: 0 0; } 
+            to { background-position: 10000px 5000px; } 
+        }
 
-        .container { text-align: center; background: rgba(10, 15, 25, 0.9); padding: 40px; border-radius: 20px; border: 1px solid var(--alien-green); box-shadow: 0 0 30px rgba(0, 255, 204, 0.3); max-width: 600px; z-index: 1; }
+        .container { 
+            text-align: center; 
+            background: rgba(10, 15, 25, 0.92); 
+            padding: 40px 20px; 
+            border-radius: 20px; 
+            border: 1px solid var(--alien-green); 
+            box-shadow: 0 0 40px rgba(0, 255, 204, 0.2); 
+            max-width: 700px; 
+            width: 90%;
+            margin: 20px;
+            z-index: 1; 
+        }
         
-        .heart { width: 80px; height: 80px; fill: var(--alien-green); filter: drop-shadow(0 0 10px var(--alien-green)); animation: pulse 2s infinite; margin-bottom: 20px; }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+        /* Pulsing Green Heart */
+        .heart { 
+            width: 70px; height: 70px; 
+            fill: var(--alien-green); 
+            filter: drop-shadow(0 0 12px var(--alien-green)); 
+            animation: pulse 2s ease-in-out infinite; 
+            margin-bottom: 15px; 
+        }
+        @keyframes pulse { 
+            0%, 100% { transform: scale(1); opacity: 1; } 
+            50% { transform: scale(1.1); opacity: 0.8; } 
+        }
 
-        h1 { font-size: 2rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
-        p { color: #a0aec0; margin-bottom: 30px; font-size: 1.1rem; }
+        h1 { font-size: 2.2rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 3px; font-weight: 300; }
+        p { color: #a0aec0; margin-bottom: 35px; font-size: 1.1rem; letter-spacing: 1px; }
         
-        /* The container for your Google Form */
-        .form-wrapper { width: 100%; overflow: hidden; border-radius: 10px; }
-        iframe { border: none; width: 100%; height: 500px; }
+        /* Intake Form Styling */
+        .form-wrapper { 
+            width: 100%; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        iframe { border: none; width: 100%; height: 600px; display: block; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .container { padding: 25px 15px; }
+        }
     </style>
 </head>
 <body>
     <div class="stars"></div>
     <div class="container">
-        <svg class="heart" viewBox="0 0 32 32"><path d="M16 28.5L4.5 17c-2.5-2.5-2.5-6.5 0-9s6.5-2.5 9 0l2.5 2.5 2.5-2.5c2.5-2.5 6.5-2.5 9 0s2.5 6.5 0 9L16 28.5z"/></svg>
+        <!-- Pulsing Alien Heart Symbol -->
+        <svg class="heart" viewBox="0 0 32 32">
+            <path d="M16 28.5L4.5 17c-2.5-2.5-2.5-6.5 0-9s6.5-2.5 9 0l2.5 2.5 2.5-2.5c2.5-2.5 6.5-2.5 9 0s2.5 6.5 0 9L16 28.5z"/>
+        </svg>
+        
         <h1>Find your Extraterrestrial Soul Mate Soon...</h1>
-        <p>Prepare for the post-invasion dating era. Join the waitlist below.</p>
+        <p>The universe is vast. Why spend it alone? Join the waitlist.</p>
         
         <div class="form-wrapper">
-            <iframe src="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMBM50MFCZ3TXsnhmU1bOVgL9uG0Hq6SE2YhLJGjJxrRnUMQ/viewform?embedded=true" width="640" height="556" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>">Loading…</iframe>
+            <!-- Your Verified Google Form Embed -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMBM50MFCZ3TXsnhmU1bOVgL9uG0Hq6SE2YhLJGjJxrRnUMQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     </div>
 </body>
